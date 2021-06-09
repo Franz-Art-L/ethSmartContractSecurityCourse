@@ -28,6 +28,7 @@ contract Library {
         if(owner == address(0)){
             owner = msg.sender;
     }
+    
         else{
             throw; 
         }

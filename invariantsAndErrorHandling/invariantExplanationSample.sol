@@ -19,7 +19,7 @@ contract Bank {
  it should never be smaller than msg.value, because even though msg.sender is 0 to begin with but we added on msg.value */
 
 /* however the invariant on line 11 will only be true if we only put it at the bottom of the function, at the end of the code execution,
-because if we were to put this invariant at the top of the functio body, this will not be true, so it means it will not be anymore an invariant
+because if we were to put this invariant at the top of the function body, this will not be true, so it means it will not be anymore an invariant
 because the code -> assert(balanceOf[msg.sender] >= msg.value); will not be anymore true if we will put it at the top of the function body,
 since we hadn't added yet the msg.value to the balanceOf msg.sender since the code -> balanceOf[msg.sender] += msg.value written after the invariant,
 like for example if the balance of msg.sender before the execution of the deposit function is 0 and then the value of the deposit is 100, so therefore the invariant
